@@ -15,8 +15,9 @@ pn = [list(eval(p.strip())) for p in pn]
 p1 = 0
 p2 = 0
 for page in pn:
-    r=[y for x,y in R if x in page and y in page]
-    sortedpage = sorted(page,key=r.count)
+    ry=[y for x,y in R if x in page and y in page]
+    rx=[x for x,y in R if x in page and y in page]
+    sortedpage = sorted(sorted(page,key=rx.count, reverse=True),key=ry.count)
     if page == sortedpage:
         p1 += page[len(page)//2]
     else:
