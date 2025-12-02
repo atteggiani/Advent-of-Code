@@ -1,5 +1,5 @@
 .vscode
 *.code-workspace
 .*cache/
-input*
+*input*
 __pycache__/
